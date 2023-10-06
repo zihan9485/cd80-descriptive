@@ -43,6 +43,7 @@ def clustering_demo() -> None:
 
     st.title("Unsupervised Clustering")
     st.caption("Company: " + str(company_id))
+    st.info("The demo may take a while to load")
 
     mapper = umap.UMAP().fit(df.drop(columns=["Risk"]))
 
