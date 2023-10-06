@@ -7,3 +7,9 @@ matplotlib
 plotly
 scikit-learn
 statsmodels
+seaborn
+umap-learn
+hdbscan
+shap
+optuna
+imblearn
