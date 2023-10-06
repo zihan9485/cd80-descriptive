@@ -64,7 +64,6 @@ def supervised_modelling_demo() -> None:
             X_train), columns=X_train.columns)
         X_test = pd.DataFrame(scaler.transform(X_test), columns=X_test.columns)
 
-        # TODO: Hyperparam optimisation using Optuna
         clf = GradientBoostingClassifier(n_estimators=100, learning_rate=0.5,
                                         max_depth=5, random_state=0
                                         ).fit(X_train, y_train)
@@ -72,7 +71,7 @@ def supervised_modelling_demo() -> None:
         y_pred = clf.predict(X_test)
         y_pred_prob = clf.predict_proba(X_test)
 
-
+    # Hyperparameter optimisation takes very long
     # def objective(trial):
 
     #     n_estimators = trial.suggest_int("n_estimators", 10, 500)
